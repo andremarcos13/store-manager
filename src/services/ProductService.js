@@ -10,7 +10,14 @@ const servByIdProducts = async (id) => {
   return findByIdProducts;
 };
 
+const servCreateProduct = async (name) => {
+  const createProducts = await ProductModel.createProduct(name);
+  console.log('createProcutsserv', createProducts);
+  return createProducts;
+};
+
 module.exports = {
   servByIdProducts,
   servGetAllProducts,
+  servCreateProduct,
 };
