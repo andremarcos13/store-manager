@@ -12,7 +12,6 @@ const servByIdProducts = async (id) => {
 
 const servCreateProduct = async (name) => {
   const createProducts = await ProductModel.createProduct(name);
-  console.log('createProcutsserv', createProducts);
   return createProducts;
 };
 
