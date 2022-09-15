@@ -19,7 +19,15 @@ const ctrlByIdSales = async (req, res) => {
     return res.status(200).json(sales);
 };
 
+const ctrlCreateSale = async (req, res) => {
+  const products = req.body;
+  const jc = await SaleService.servCreateSale(products);
+  console.log('jesusajuda cntroller', jc);
+  return res.status(200).json(jc);
+};
+
 module.exports = {
   ctrlGetAllSales,
   ctrlByIdSales,
+  ctrlCreateSale,
 };

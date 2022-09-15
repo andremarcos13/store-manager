@@ -30,6 +30,7 @@ const ctrlCreateProduct = async (req, res) => {
   const newProduct = await ProductService.servCreateProduct(name);
     return res.status(201).json(newProduct);
 };
+
 module.exports = {
   ctrlByIdProducts,
   ctrlGetAllProducts,

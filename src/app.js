@@ -19,6 +19,7 @@ const SaleController = require('./controllers/SaleController');
 
 app.get('/sales', SaleController.ctrlGetAllSales);
 app.get('/sales/:id', SaleController.ctrlByIdSales);
+app.post('/sales', SaleController.ctrlCreateSale);
 
 // não remova essa exportação, é para o avaliador funcionar
 // você pode registrar suas rotas normalmente, como o exemplo acima

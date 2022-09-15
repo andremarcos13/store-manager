@@ -11,7 +11,13 @@ const servByIdSales = async (id) => {
   return findByIdSales;
 };
 
+const servCreateSale = async (products) => {
+  const create = await SaleModel.createSale(products);
+  return create;
+};
+
 module.exports = {
   servGetAllSales,
   servByIdSales,
+  servCreateSale,
 };
