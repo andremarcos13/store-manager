@@ -14,7 +14,6 @@ const getAllSales = async () => {
   const [sales] = await connection.execute(query);
   // console.log('getAllSales', sales.map(serialize));
     // return sales.map(serialize);
-  console.log('testeeeeeeeeeeeeeeeeeee', [[sales]]);
     return sales;
 };
 
