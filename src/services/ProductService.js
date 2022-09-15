@@ -12,7 +12,8 @@ const servByIdProducts = async (id) => {
 
 const servCreateProduct = async (name) => {
   const createProducts = await ProductModel.createProduct(name);
-  return createProducts;
+  // return createProducts;
+  return ({ id: createProducts.insertId, name });
 };
 
 module.exports = {

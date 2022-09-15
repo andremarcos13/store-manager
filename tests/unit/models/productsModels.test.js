@@ -16,7 +16,7 @@ describe('Testa a camada model-products', function () {
     expect(products).to.equal(productsMock[0]);
   });
   it('testa se a função createProduct funciona como esperado', async function () {
-    sinon.stub(connection, 'execute').resolves([productsMock[0]]);
+    sinon.stub(connection, 'execute').resolves([productsMock[2]]);
     const product = await createProduct('Escudo do Capitão América');
     expect(product).to.equal(productsMock[2]);
   });
