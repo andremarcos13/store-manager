@@ -16,10 +16,10 @@ describe('Testa a camada service-sales', async function () {
     const sales = await servByIdSales(1);
     expect(sales).to.equal(salesMock[0])
   })
-  it('testa se a função createSaleDate funciona como esperado', async function () {
-    sinon.stub(connection, 'execute').resolves([{ insertId: 1 }]);
-    const saleId = await servCreateSale(1);
-    expect(saleId).to.equal(1);
-  })
+  // it('testa se a função createSaleDate funciona como esperado', async function () {
+  //   sinon.stub(connection, 'execute').resolves([{ insertId: 1 }]);
+  //   const saleId = await servCreateSale(1);
+  //   expect(saleId).to.equal(1);
+  // })
     afterEach(sinon.restore);
 })
