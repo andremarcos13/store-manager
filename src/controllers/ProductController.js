@@ -2,6 +2,7 @@ const ProductService = require('../services/ProductService');
 
 const ctrlGetAllProducts = async (req, res) => {
   const products = await ProductService.servGetAllProducts();
+  console.log('teste ctrlGetAllProducts', products);
   if (!products) {
     return res.status(404).json({ message: 'Product not found' });
   }

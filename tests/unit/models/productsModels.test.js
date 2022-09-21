@@ -7,6 +7,7 @@ const productsMock = require('../mocks/products.model.mock');
 describe('Testa a camada model-products', function () {
   it('testa se a função getAllProducts funciona como esperado', async function () {
     sinon.stub(connection, 'execute').resolves([productsMock]);
+    console.log('getAllProducts mock', [productsMock]);
     const products = await getAllProducts();
     expect(products).to.equal(productsMock)
   });
@@ -20,5 +21,5 @@ describe('Testa a camada model-products', function () {
     const product = await createProduct('Escudo do Capitão América');
     expect(product).to.equal(productsMock[2]);
   });
-  this.afterEach(sinon.restore);
+  afterEach(sinon.restore);
 })
