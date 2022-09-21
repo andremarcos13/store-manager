@@ -12,5 +12,4 @@ const productsMock = [
     name: 'Escudo do Capitão América'
   }
 ]
-
 module.exports = productsMock;

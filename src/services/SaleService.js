@@ -12,8 +12,11 @@ const servByIdSales = async (id) => {
 };
 
 const servCreateSale = async (products) => {
-  const create = await SaleModel.createSale(products);
-  return create;
+  console.log('parametro service', products);
+  const newSaleId = await SaleModel.createSaleDate();
+  const create = await SaleModel.createSale(products, newSaleId);
+  console.log('create no service', create);
+  return { id: newSaleId, itemsSold: products };
 };
 
 module.exports = {
